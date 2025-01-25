@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://btlt7q26kby41"]
+
+[ext_resource type="PackedScene" uid="uid://b8y2380rt060i" path="res://inherited_scenes/enemy.tscn" id="1_p82ry"]
+[ext_resource type="Resource" uid="uid://bi6uivt07qr4y" path="res://inherited_scenes/bat/bat_resource.tres" id="2_7npbc"]
+[ext_resource type="Texture2D" uid="uid://b7wt675vj267r" path="res://inherited_scenes/bat/bat.webp" id="3_tngix"]
+[ext_resource type="Script" path="res://inherited_scenes/bat/bat.gd" id="4_dlwjj"]
+
+[node name="Enemy" instance=ExtResource("1_p82ry")]
+stats = ExtResource("2_7npbc")
+
+[node name="Description" parent="VBoxContainer" index="2"]
+text = "Press \"Enter\" to move right, \"Ctrl\"+\"Enter\" to move left."
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(234, 121)
+scale = Vector2(0.417969, 0.417969)
+texture = ExtResource("3_tngix")
+script = ExtResource("4_dlwjj")

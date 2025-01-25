@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpkgwo54ug1ib"]
+
+[ext_resource type="PackedScene" uid="uid://btlt7q26kby41" path="res://inherited_scenes/bat/bat.tscn" id="1_in1fm"]
+[ext_resource type="PackedScene" uid="uid://da6xqdjew381s" path="res://inherited_scenes/zombie/zombie.tscn" id="2_wguxs"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Bat" parent="." instance=ExtResource("1_in1fm")]
+offset_left = 30.0
+offset_top = 23.0
+offset_right = 30.0
+offset_bottom = 23.0
+script = null
+
+[node name="Zombie" parent="." instance=ExtResource("2_wguxs")]
+offset_left = 30.0
+offset_top = 133.0
+offset_right = 30.0
+offset_bottom = 133.0
+script = null

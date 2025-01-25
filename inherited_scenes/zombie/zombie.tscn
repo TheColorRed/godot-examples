@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://da6xqdjew381s"]
+
+[ext_resource type="PackedScene" uid="uid://b8y2380rt060i" path="res://inherited_scenes/enemy.tscn" id="1_r1534"]
+[ext_resource type="Resource" uid="uid://c0ld7hgqjl8gf" path="res://inherited_scenes/zombie/zombie_resource.tres" id="2_rf4bc"]
+[ext_resource type="Texture2D" uid="uid://bbbq7we4b8no2" path="res://inherited_scenes/zombie/zombie.png" id="3_r2kap"]
+[ext_resource type="Script" path="res://inherited_scenes/zombie/zombie.gd" id="4_3fv8o"]
+
+[node name="Enemy" instance=ExtResource("1_r1534")]
+stats = ExtResource("2_rf4bc")
+
+[node name="Description" parent="VBoxContainer" index="2"]
+text = "Use the Arrow keys to move."
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(226, 135)
+scale = Vector2(0.524, 0.524)
+texture = ExtResource("3_r2kap")
+script = ExtResource("4_3fv8o")
