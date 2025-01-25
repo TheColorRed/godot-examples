@@ -5,11 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bbbq7we4b8no2" path="res://inherited_scenes/zombie/zombie.png" id="3_r2kap"]
 [ext_resource type="Script" path="res://inherited_scenes/zombie/zombie.gd" id="4_3fv8o"]
 
-[node name="Enemy" instance=ExtResource("1_r1534")]
+[node name="Zombie" instance=ExtResource("1_r1534")]
 stats = ExtResource("2_rf4bc")
-
-[node name="Description" parent="VBoxContainer" index="2"]
-text = "Use the Arrow keys to move."
 
 [node name="Sprite2D" parent="." index="1"]
 position = Vector2(226, 135)
