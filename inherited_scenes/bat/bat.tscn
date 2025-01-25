@@ -8,6 +8,9 @@
 [node name="Bat" instance=ExtResource("1_p82ry")]
 stats = ExtResource("2_7npbc")
 
+[node name="Description" parent="Information" index="2"]
+text = "Press Enter or Ctrl+Enter to move."
+
 [node name="Sprite2D" parent="." index="1"]
 position = Vector2(234, 121)
 scale = Vector2(0.417969, 0.417969)
