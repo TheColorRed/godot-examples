@@ -1,4 +1,4 @@
-class_name Enemy2
+class_name EnemySignal_Enemy
 extends Node2D
 
 @export var progress: ProgressBar
