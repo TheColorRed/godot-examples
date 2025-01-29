@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ofr5wl62cyeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0owl"]
+size = Vector2(2116, 20)
+
+[node name="floor" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -10.0
+offset_right = 2116.0
+offset_bottom = 664.0
+color = Color(0, 0.6, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1058, 0)
+shape = SubResource("RectangleShape2D_m0owl")

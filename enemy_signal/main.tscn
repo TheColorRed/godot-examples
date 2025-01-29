@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw0idg8g7msyl"]
+
+[ext_resource type="PackedScene" uid="uid://bjgs7mk1xhmox" path="res://enemy_signal/character/character.tscn" id="1_cnm8v"]
+[ext_resource type="PackedScene" uid="uid://ofr5wl62cyeg" path="res://enemy_signal/floor.tscn" id="2_h04cq"]
+[ext_resource type="PackedScene" uid="uid://ba2j8psxvphj7" path="res://enemy_signal/enemy/enemy.tscn" id="3_cjucm"]
+
+[sub_resource type="Gradient" id="Gradient_oed0c"]
+colors = PackedColorArray(0, 0, 0.635294, 1, 0, 0.54902, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wh4fi"]
+gradient = SubResource("Gradient_oed0c")
+fill_to = Vector2(0, 1)
+
+[node name="Main" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -99.0
+offset_top = -29.0
+offset_right = 1177.0
+offset_bottom = 480.0
+texture = SubResource("GradientTexture2D_wh4fi")
+
+[node name="Character" parent="." instance=ExtResource("1_cnm8v")]
+position = Vector2(536, 285)
+scale = Vector2(2, 2)
+
+[node name="Floor" parent="." instance=ExtResource("2_h04cq")]
+position = Vector2(0, 322)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_cjucm")]
+position = Vector2(1025, 250)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_cjucm")]
+position = Vector2(244, 252)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 397.0
+offset_top = 28.0
+offset_right = 845.0
+offset_bottom = 103.0
+grow_horizontal = 2
+text = "Use the keyboard to move left/right
+
+When the Sword touches the area damage will be applied."
